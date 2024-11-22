@@ -12,7 +12,7 @@ ghLabelSync() {
     return 1
   fi
 
-  local REPO_SOURCE="beefchimi/template-common"
+  local REPO_SOURCE="beefchimi/template-vite-react"
   local REPO_TARGET="beefchimi/$REPO_NAME"
 
   # Fetch labels from the source repository
