@@ -1,4 +1,4 @@
-import {clamp, clx} from 'beeftools';
+import {clamp} from 'beeftools';
 
 import styles from './Spinner.module.css';
 
@@ -22,7 +22,7 @@ export function Spinner({size = 16, ariaLabel = 'Loading…'}: SpinnerProps) {
       style={{fontSize: safeSize}}
       data-spinner="simple"
     >
-      <div className={clx(styles.Icon, 'motion-spin')} />
+      <div className={styles.Icon} />
       <p className="visually-hidden">{ariaLabel}</p>
     </div>
   );

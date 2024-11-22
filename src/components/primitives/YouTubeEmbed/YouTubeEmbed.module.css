@@ -1,9 +1,11 @@
+@import '@src/styles/media-queries.css';
+
 .YouTubeEmbed {
   padding: 20px;
   width: 100%;
   max-width: var(--breakpoint-x-widescreen);
 
-  @media (min-width: 1080px) {
+  @media (--min-hd) {
     padding: 32px;
   }
 

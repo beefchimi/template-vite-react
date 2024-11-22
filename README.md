@@ -4,7 +4,7 @@ This template provides a minimal setup to get React working in Vite with HMR and
 
 ## Tasks
 
-- Update all instances of `@media`.
+- Figure out how to import `@custom-media` globally, so that we do not need to `@import` it in every file.
 - See if I can replace all `mixin` instances with `CSS Modules > composes`.
   - <https://lightningcss.dev/css-modules.html>
 - Update `Button` styles.

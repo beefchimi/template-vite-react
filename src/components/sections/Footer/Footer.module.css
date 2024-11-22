@@ -1,3 +1,5 @@
+@import '@src/styles/media-queries.css';
+
 .Footer {
   --footer-action-padding: 6px;
   --footer-underline-width: 0%;
@@ -6,7 +8,7 @@
   width: 100%;
   text-align: center;
 
-  @media (min-width: 1280px) {
+  @media (--min-desktop) {
     padding: 40px;
   }
 }

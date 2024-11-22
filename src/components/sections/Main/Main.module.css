@@ -1,9 +1,11 @@
+@import '@src/styles/media-queries.css';
+
 .Main {
   padding: 20px;
   width: 100%;
   text-align: center;
 
-  @media (min-width: 1280px) {
+  @media (--min-desktop) {
     padding: 40px;
   }
 }

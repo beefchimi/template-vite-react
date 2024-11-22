@@ -1,3 +1,5 @@
+@import '@src/styles/media-queries.css';
+
 .Accordion {
   --accordion-title-size: 20px;
   --accordion-icon-rotate: 0deg;
@@ -13,7 +15,7 @@
 
   display: grid;
 
-  @media (min-width: 768px) {
+  @media (--min-tablet) {
     --accordion-title-size: 24px;
   }
 }
@@ -21,7 +23,7 @@
 .smallTitle {
   --accordion-title-size: 16px;
 
-  @media (min-width: 768px) {
+  @media (--min-tablet) {
     --accordion-title-size: 18px;
   }
 }
