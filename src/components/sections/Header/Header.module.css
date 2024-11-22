@@ -1,0 +1,17 @@
+.Header {
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+
+  @media (min-width: 1280px) {
+    padding: 40px;
+  }
+}
+
+.Actions {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  justify-items: center;
+  gap: 10px;
+}

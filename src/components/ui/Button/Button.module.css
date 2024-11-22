@@ -1,0 +1,103 @@
+.Button {
+  --button-label-opacity: 1;
+
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background-color: var(--color-primary);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  overflow: hidden;
+
+  &:disabled {
+    opacity: 0.8;
+  }
+
+  &[aria-pressed] {
+    /* TODO: Author styles */
+  }
+
+  &:focus-visible {
+    /* Inherited from `button-basic` */
+  }
+
+  &:hover:not(:active) {
+    background-color: var(--color-primary-dark);
+  }
+}
+
+.loading {
+  /*
+    TODO: We may want to counter the `disabled > opacity` and
+    keep `opacity` at `1` while `loading`.
+  */
+  --button-label-opacity: 0;
+}
+
+/* --- Variants --- */
+
+.variantPrimary {
+}
+
+.variantSecondary {
+}
+
+.variantDanger {
+}
+
+/* This selector needs to come AFTER the `.variant*` classes */
+.outline {
+  border-color: var(--color-primary);
+  background-color: transparent;
+}
+
+/* --- Label --- */
+
+.LabelWrapper {
+  z-index: 2;
+  position: relative;
+  opacity: var(--button-label-opacity);
+  transition: opacity var(--speed) var(--ease);
+}
+
+.Label {
+  /* font-family: var(--font-body); */
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+/* --- Loading Spinner --- */
+
+.SpinnerWrapper {
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  place-content: center;
+  font-size: 32px;
+
+  /* Relies on `react-transition-state` hook. */
+  opacity: 1;
+  transition: opacity var(--speed) var(--ease);
+}
+
+.entered {
+  opacity: 1;
+}
+
+.preEnter,
+.exiting {
+  opacity: 0;
+}
+
+.exited,
+.unmounted {
+  /* Since we unMount when `!loading`, this isn't actually required. */
+  display: none;
+}

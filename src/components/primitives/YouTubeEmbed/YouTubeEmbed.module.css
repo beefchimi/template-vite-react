@@ -1,0 +1,16 @@
+.YouTubeEmbed {
+  padding: 20px;
+  width: 100%;
+  max-width: var(--breakpoint-x-widescreen);
+
+  @media (min-width: 1080px) {
+    padding: 32px;
+  }
+
+  > iframe {
+    /* `aspect-ratio` should be dynamic. */
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    background-color: var(--shade-black-80);
+  }
+}

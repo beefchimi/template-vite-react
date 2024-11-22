@@ -1,0 +1,22 @@
+@keyframes motionFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes motionSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* TODO: Figure out how to use `:global()` keyframes in `lightningcss`. */
+.motion-spin {
+  animation: motionSpin var(--speed-slow) var(--ease) infinite both;
+}

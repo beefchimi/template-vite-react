@@ -1,0 +1,63 @@
+{
+  "name": "template-vite-react",
+  "version": "0.0.1",
+  "description": "Vite/React/TypeScript Boilerplate",
+  "author": "Curtis Dulmage",
+  "license": "UNLICENSED",
+  "keywords": [
+    "Vite",
+    "React",
+    "TypeScript",
+    "ESLint",
+    "Boilerplate",
+    "Starter"
+  ],
+  "homepage": "https://github.com/beefchimi/template-vite-react",
+  "bugs": {
+    "url": "https://github.com/beefchimi/template-vite-react/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beefchimi/template-vite-react.git"
+  },
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.11.0",
+    "npm": ">=10.9.0"
+  },
+  "scripts": {
+    "clean": "rm -rf dist && rm -rf node_modules/.cache && rm -rf node_modules/.vite",
+    "nuke": "npm run clean && rm -rf node_modules && rm -rf package-lock.json && npm cache clean --force",
+    "start": "vite",
+    "preview": "vite preview --host",
+    "build": "npm run clean && tsc -b && vite build",
+    "lint": "eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "echo 'Prettier has not been configured for this app.'",
+    "test": "echo 'There is no testing suite set up for this app.'"
+  },
+  "dependencies": {
+    "beeftools": "^0.1.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-transition-state": "^2.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@types/node": "^22.9.1",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react-swc": "^3.7.1",
+    "eslint": "^9.15.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "globals": "^15.12.0",
+    "lightningcss": "^1.28.1",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.15.0",
+    "vite": "^5.4.11",
+    "vite-plugin-svgr": "^4.3.0"
+  }
+}

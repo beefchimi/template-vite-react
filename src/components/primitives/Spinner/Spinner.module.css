@@ -1,0 +1,11 @@
+.Spinner {
+  font-size: 16px;
+}
+
+.Icon {
+  width: 1em;
+  height: 1em;
+  border: 0.125em solid var(--shade-white-20);
+  border-top: 0.125em solid var(--shade-white-80);
+  border-radius: 50%;
+}

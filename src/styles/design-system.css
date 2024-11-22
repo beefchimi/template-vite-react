@@ -1,0 +1,154 @@
+/* --- Colours --- */
+:root {
+  /*
+    Consider using `color-mix` for color shades:
+    color-mix(in srgb, var(--color-primary), black 10%)
+  */
+
+  --color-light: #eadeda;
+  --color-dark: #181818;
+
+  /* Dark Purple */
+  /*
+  --color-primary-light: #3f386b;
+  --color-primary: #2e294e;
+  --color-primary-dark: #201c35;
+  */
+
+  /* Blue */
+  --color-primary-light: #293be0;
+  --color-primary: #1b2cc1;
+  --color-primary-dark: #1725a1;
+
+  /* Yellow */
+  --color-secondary-light: #ffdd33;
+  --color-secondary: #ffd400;
+  --color-secondary-dark: #e0bb00;
+
+  /* Red */
+  /* --color-danger: #ee2e31; */
+
+  /* Shades */
+  --shade-white-4: rgb(255, 255, 255, 0.04);
+  --shade-white-20: rgb(255, 255, 255, 0.2);
+  --shade-white-80: rgb(255, 255, 255, 0.8);
+
+  --shade-black-4: rgb(0, 0, 0, 0.04);
+  --shade-black-20: rgb(0, 0, 0, 0.2);
+  --shade-black-80: rgb(0, 0, 0, 0.8);
+
+  /* UI */
+  --selection-primary: var(--color-light);
+  --selection-secondary: var(--color-secondary);
+}
+
+/* --- Sizing --- */
+:root {
+  --breakpoint-x-mobile: 320px;
+  --breakpoint-x-phablet: 540px;
+  --breakpoint-x-tablet: 768px;
+  --breakpoint-x-classic: 960px;
+  --breakpoint-x-hd: 1080px;
+  --breakpoint-x-desktop: 1280px;
+  --breakpoint-x-widescreen: 1440px;
+  --breakpoint-x-ultrawide: 1920px;
+
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+  --space-100: 100px;
+
+  --radius-tight: 4px;
+  --radius: 6px;
+  --radius-loose: 12px;
+  --radius-full: 999px;
+}
+
+/* --- Animation --- */
+:root {
+  --speed-fast: 120ms;
+  --speed: 240ms;
+  --speed-slow: 480ms;
+  --speed-slower: 960ms;
+
+  --ease: cubic-bezier(0.64, 0, 0.32, 1);
+  --ease-gentle: cubic-bezier(0.2, 0.1, 0.8, 0.9);
+  --ease-excite: cubic-bezier(0.18, 0.66, 0.6, 1.22);
+  --ease-bungie: cubic-bezier(0.32, 1.46, 0.54, 1.28);
+  --ease-anticipate: cubic-bezier(0.38, -0.4, 0.84, 0.44);
+  --ease-spring: linear(
+    0,
+    0.009,
+    0.035 2.1%,
+    0.141,
+    0.281 6.7%,
+    0.723 12.9%,
+    0.938 16.7%,
+    1.017,
+    1.077,
+    1.121,
+    1.149 24.3%,
+    1.159,
+    1.163,
+    1.161,
+    1.154 29.9%,
+    1.129 32.8%,
+    1.051 39.6%,
+    1.017 43.1%,
+    0.991,
+    0.977 51%,
+    0.974 53.8%,
+    0.975 57.1%,
+    0.997 69.8%,
+    1.003 76.9%,
+    1.004 83.8%,
+    1
+  );
+}
+
+/* --- Typography & Components --- */
+:root {
+  --font-body: 'DM Sans', var(--font-stack-sans-serif);
+  --font-title: 'Playfair Display', var(--font-stack-serif);
+
+  --focus-ring-color: var(--color-primary);
+  --focus-ring-size: 2px;
+
+  --icon-size: 20px;
+}
+
+/* --- Dark Mode --- */
+
+html[data-theme='dark'] {
+  /*
+    "Dark mode" essentially flips all of the design-system variables.
+  */
+
+  --color-light: #181818;
+  --color-dark: #eadeda;
+
+  /* Yellow */
+  --color-primary-light: #ffdd33;
+  --color-primary: #ffd400;
+  --color-primary-dark: #e0bb00;
+
+  /* Blue */
+  --color-secondary-light: #293be0;
+  --color-secondary: #1b2cc1;
+  --color-secondary-dark: #1725a1;
+
+  /* Shades */
+  --shade-white-4: rgb(0, 0, 0, 0.04);
+  --shade-white-20: rgb(0, 0, 0, 0.2);
+  --shade-white-80: rgb(0, 0, 0, 0.8);
+
+  --shade-black-4: rgb(255, 255, 255, 0.04);
+  --shade-black-20: rgb(255, 255, 255, 0.2);
+  --shade-black-80: rgb(255, 255, 255, 0.8);
+}

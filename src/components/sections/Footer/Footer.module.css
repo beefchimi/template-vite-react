@@ -1,0 +1,57 @@
+.Footer {
+  --footer-action-padding: 6px;
+  --footer-underline-width: 0%;
+
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+
+  @media (min-width: 1280px) {
+    padding: 40px;
+  }
+}
+
+.Layout {
+  display: grid;
+  gap: 64px;
+  margin: 0 auto;
+  max-width: var(--breakpoint-x-desktop);
+}
+
+.LegalText {
+  font-size: 13px;
+  letter-spacing: 0.06em;
+}
+
+/* --- Social Links --- */
+
+.SocialLinks {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: center;
+  justify-items: center;
+  gap: 16px;
+}
+
+.SocialLinkItem {
+}
+
+.SocialLinkAction {
+  display: block;
+  padding: var(--footer-action-padding);
+  border-radius: var(--radius);
+  background-color: transparent;
+  /* `focus-ring` + `transition` is inherited by `button-basic` */
+
+  &:hover {
+    color: var(--color-primary);
+    background-color: var(--shade-black-4);
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.SocialIconWrapper {
+}
