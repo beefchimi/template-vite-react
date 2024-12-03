@@ -54,7 +54,7 @@
   }
 
   &:hover:not(:active) {
-    background-color: var(--shade-black-4);
+    background-color: var(--shade-dark-4);
   }
 }
 

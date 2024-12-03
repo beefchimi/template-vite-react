@@ -35,7 +35,7 @@ button.TextLink {
     left: -0.25em;
     right: -0.25em;
     border-radius: var(--radius-tight);
-    background-color: var(--shade-black-4);
+    background-color: var(--shade-dark-4);
     opacity: var(--text-link-bg-opacity);
     transition: opacity var(--speed) var(--ease);
   }

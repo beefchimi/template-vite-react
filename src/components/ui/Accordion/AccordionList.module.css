@@ -7,9 +7,9 @@
 
   padding-top: 4px;
   padding-bottom: 4px;
-  border-top: 1px solid var(--color-dark);
+  border-top: 1px solid var(--color-text);
 
   &:last-child {
-    border-bottom: 1px solid var(--color-dark);
+    border-bottom: 1px solid var(--color-text);
   }
 }

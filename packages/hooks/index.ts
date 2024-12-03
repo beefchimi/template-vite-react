@@ -26,6 +26,8 @@ export {
   type KeyPressOptions,
 } from './useKeyPress.ts';
 
+export {useLocalStorage} from './useLocalStorage.ts';
+
 export {useMediaQuery, type MediaQueryOptions} from './useMediaQuery.ts';
 export {useMounted} from './useMounted.ts';
 

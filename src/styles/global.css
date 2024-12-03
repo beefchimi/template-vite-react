@@ -1,7 +1,7 @@
 html {
   display: grid;
-  color: var(--color-light);
-  background-color: var(--color-dark);
+  color: var(--color-text);
+  background-color: var(--color-bg);
 }
 
 body {
@@ -13,12 +13,12 @@ body {
   min-height: 100%;
 }
 
+/* --- Typography --- */
+
 ::selection {
   color: var(--selection-primary);
   background-color: var(--selection-secondary);
 }
-
-/* --- Typography --- */
 
 .font-body {
   font-family: var(--font-body);

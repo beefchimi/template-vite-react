@@ -1,45 +1,42 @@
 /* --- Colours --- */
 :root {
-  /*
-    Consider using `color-mix` for color shades:
-    color-mix(in srgb, var(--color-primary), black 10%)
-  */
+  --color-text-light: #1c5f54;
+  --color-text: #0f332d;
+  --color-text-dark: #09201c;
 
-  --color-light: #eadeda;
-  --color-dark: #181818;
+  --color-bg-light: #f6f8f2;
+  --color-bg: #e1e8d4;
+  --color-bg-dark: #d1dbbd;
 
-  /* Dark Purple */
-  /*
-  --color-primary-light: #3f386b;
-  --color-primary: #2e294e;
-  --color-primary-dark: #201c35;
-  */
+  --color-primary-light: #397f63;
+  --color-primary: #2c634d;
+  --color-primary-dark: #204637;
 
-  /* Blue */
-  --color-primary-light: #293be0;
-  --color-primary: #1b2cc1;
-  --color-primary-dark: #1725a1;
+  --color-secondary-light: #aecea1;
+  --color-secondary: #8eba7d;
+  --color-secondary-dark: #80b26c;
 
-  /* Yellow */
-  --color-secondary-light: #ffdd33;
-  --color-secondary: #ffd400;
-  --color-secondary-dark: #e0bb00;
+  --color-accent-light: #56b37a;
+  --color-accent: #41905f;
+  --color-accent-dark: #397f54;
 
-  /* Red */
-  /* --color-danger: #ee2e31; */
+  /* Persistent Colors */
+  --color-danger-light: #e34f6c;
+  --color-danger: #d62246;
+  --color-danger-dark: #c21e3f;
 
   /* Shades */
-  --shade-white-4: rgb(255, 255, 255, 0.04);
-  --shade-white-20: rgb(255, 255, 255, 0.2);
-  --shade-white-80: rgb(255, 255, 255, 0.8);
+  --shade-light-4: rgb(255, 255, 255, 0.04);
+  --shade-light-20: rgb(255, 255, 255, 0.2);
+  --shade-light-80: rgb(255, 255, 255, 0.8);
 
-  --shade-black-4: rgb(0, 0, 0, 0.04);
-  --shade-black-20: rgb(0, 0, 0, 0.2);
-  --shade-black-80: rgb(0, 0, 0, 0.8);
+  --shade-dark-4: rgb(0, 0, 0, 0.04);
+  --shade-dark-20: rgb(0, 0, 0, 0.2);
+  --shade-dark-80: rgb(0, 0, 0, 0.8);
 
   /* UI */
-  --selection-primary: var(--color-light);
-  --selection-secondary: var(--color-secondary);
+  --selection-primary: var(--color-bg);
+  --selection-secondary: var(--color-text);
 }
 
 /* --- Sizing --- */
@@ -126,29 +123,32 @@
 /* --- Dark Mode --- */
 
 html[data-theme='dark'] {
-  /*
-    "Dark mode" essentially flips all of the design-system variables.
-  */
+  --color-text-light: #fff;
+  --color-text: #e7f8e2;
+  --color-text-dark: #d6f3ce;
 
-  --color-light: #181818;
-  --color-dark: #eadeda;
+  --color-bg-light: #213131;
+  --color-bg: #101818;
+  --color-bg-dark: #080c0c;
 
-  /* Yellow */
-  --color-primary-light: #ffdd33;
-  --color-primary: #ffd400;
-  --color-primary-dark: #e0bb00;
+  --color-primary-light: #8bf8a1;
+  --color-primary: #60f67e;
+  --color-primary-dark: #3ef463;
 
-  /* Blue */
-  --color-secondary-light: #293be0;
-  --color-secondary: #1b2cc1;
-  --color-secondary-dark: #1725a1;
+  --color-secondary-light: #c0edd2;
+  --color-secondary: #98e1b7;
+  --color-secondary-dark: #81daa6;
 
-  /* Shades */
-  --shade-white-4: rgb(0, 0, 0, 0.04);
-  --shade-white-20: rgb(0, 0, 0, 0.2);
-  --shade-white-80: rgb(0, 0, 0, 0.8);
+  --color-accent-light: #eef47c;
+  --color-accent: #e9f056;
+  --color-accent-dark: #e4ed31;
 
-  --shade-black-4: rgb(255, 255, 255, 0.04);
-  --shade-black-20: rgb(255, 255, 255, 0.2);
-  --shade-black-80: rgb(255, 255, 255, 0.8);
+  /* Shades (inverted) */
+  --shade-light-4: rgb(0, 0, 0, 0.04);
+  --shade-light-20: rgb(0, 0, 0, 0.2);
+  --shade-light-80: rgb(0, 0, 0, 0.8);
+
+  --shade-dark-4: rgb(255, 255, 255, 0.04);
+  --shade-dark-20: rgb(255, 255, 255, 0.2);
+  --shade-dark-80: rgb(255, 255, 255, 0.8);
 }
