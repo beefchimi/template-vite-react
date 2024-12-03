@@ -1,3 +1,4 @@
+import {BreakpointProvider} from '@src/providers/BreakpointProvider.tsx';
 import {ThemeProvider} from '@src/providers/ThemeProvider.tsx';
 
 import {Footer} from '@src/components/sections/Footer/Footer.tsx';
@@ -20,7 +21,9 @@ function AppContent() {
 export function App() {
   return (
     <ThemeProvider>
-      <AppContent />
+      <BreakpointProvider>
+        <AppContent />
+      </BreakpointProvider>
     </ThemeProvider>
   );
 }

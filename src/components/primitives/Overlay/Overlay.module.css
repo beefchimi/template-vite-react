@@ -6,7 +6,7 @@
   display: grid;
   align-items: center;
   justify-items: center;
-  background-color: var(--shade-black-80);
+  background-color: var(--shade-dark-80);
 
   /* Relies on `react-transition-state` hook. */
   opacity: 1;

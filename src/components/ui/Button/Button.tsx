@@ -38,7 +38,14 @@ type CommonActionSubset = Omit<CommonActionProps, 'children' | 'className'>;
 
 export interface ButtonProps extends CommonActionSubset {
   label: string | number;
-  variant?: 'primary' | 'secondary' | 'danger';
+  variant?:
+    | 'primary'
+    | 'secondary'
+    | 'tertiary'
+    | 'foreground'
+    | 'background'
+    | 'danger';
+  size?: 'small' | 'medium' | 'large';
   loading?: boolean;
   outline?: boolean;
 }
@@ -46,13 +53,14 @@ export interface ButtonProps extends CommonActionSubset {
 function ButtonComponent(
   {
     label,
-    variant = 'primary',
+    variant = 'secondary',
+    size = 'small',
     disabled = false,
     loading = false,
     outline = false,
     ...commonProps
   }: ButtonProps,
-  ref: ForwardedRef<EitherElement>
+  ref: ForwardedRef<EitherElement>,
 ) {
   const [{status, isMounted}, toggle] = useTransitionState({
     // TODO: This needs to align with our `--speed` values.
@@ -83,6 +91,7 @@ function ButtonComponent(
       ref={ref}
       className={clx('button-basic', styles.Button, {
         [vrx('variant', variant, styles)]: Boolean(variant),
+        [vrx('size', size, styles)]: Boolean(size),
         [styles.loading]: loading,
         [styles.outline]: outline,
       })}
@@ -90,7 +99,7 @@ function ButtonComponent(
       {...commonProps}
     >
       <div className={styles.LabelWrapper}>
-        <span className={clx('text-box-trim', styles.Label)}>{label}</span>
+        <span className={styles.Label}>{label}</span>
       </div>
 
       {loadingMarkup}

@@ -1,21 +1,22 @@
-type BreakpointKey =
-  | 'mobile'
-  | 'phablet'
-  | 'tablet'
-  | 'classic'
-  | 'hd'
-  | 'desktop'
-  | 'widescreen'
-  | 'ultrawide';
+export const BREAKPOINT_ORDER = [
+  'phablet',
+  'tablet',
+  'classic',
+  'hd',
+  'desktop',
+  'widescreen',
+  'ultrawide',
+] as const;
+
+export type BreakpointKey = (typeof BREAKPOINT_ORDER)[number];
 
 type BreakpointEntry = [BreakpointKey, number];
-type BreakpointValueRecord = Record<BreakpointKey, number>;
 type BreakpointQueryRecord = Record<BreakpointKey, string>;
 
 // TODO: These hooks need to be manually syncronized with the
-// breakpoint values in `media-queries.css / global.css`.
-const BREAKPOINT_X: BreakpointValueRecord = {
-  mobile: 320,
+// breakpoint values in `design-system.css / media-queries.css`.
+const BREAKPOINT_X: Record<BreakpointKey, number> = {
+  // "mobile" is considered anything before `phablet`.
   phablet: 540,
   tablet: 768,
   classic: 960,

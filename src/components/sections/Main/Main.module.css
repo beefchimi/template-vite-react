@@ -1,6 +1,9 @@
 @import '@src/styles/media-queries.css';
 
 .Main {
+  display: grid;
+  align-content: start;
+  gap: 20px;
   padding: 20px;
   width: 100%;
   text-align: center;
@@ -8,13 +11,4 @@
   @media (--min-desktop) {
     padding: 40px;
   }
-}
-
-.Card {
-  margin: 0 auto;
-  padding: 10px;
-  max-width: 540px;
-  border-radius: var(--radius);
-  color: var(--color-dark);
-  background-color: var(--shade-white-80);
 }

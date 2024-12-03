@@ -20,13 +20,11 @@ export function useMediaQuery(query = '', options?: MediaQueryOptions) {
   const initializeWithValue = options?.initializeWithValue ?? true;
 
   function getMatches(query = '') {
-    if (IS_CLIENT) return window.matchMedia(query).matches;
-    return defaultValue;
+    return IS_CLIENT ? window.matchMedia(query).matches : defaultValue;
   }
 
   const [matches, setMatches] = useState(() => {
-    if (initializeWithValue) return getMatches(query);
-    return defaultValue;
+    return initializeWithValue ? getMatches(query) : defaultValue;
   });
 
   // Handles the change event of the media query.

@@ -1,5 +1,11 @@
 .Button {
+  --button-padding-x: 12px;
+  --button-padding-y: 8px;
+  --button-font-size: 14px;
+  --button-color-text: var(--color-text);
+  --button-color-bg: var(--color-secondary);
   --button-label-opacity: 1;
+  --button-spinner-size: 24px;
 
   position: relative;
   display: grid;
@@ -7,8 +13,9 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 20px;
-  background-color: var(--color-primary);
+  padding: var(--button-padding-y) var(--button-padding-x);
+  color: var(--button-color-text);
+  background-color: var(--button-color-bg);
   border: 1px solid transparent;
   border-radius: var(--radius);
   overflow: hidden;
@@ -18,7 +25,7 @@
   }
 
   &[aria-pressed] {
-    /* TODO: Author styles */
+    box-shadow: inset 0 0 0 2px var(--button-color-text);
   }
 
   &:focus-visible {
@@ -26,7 +33,7 @@
   }
 
   &:hover:not(:active) {
-    background-color: var(--color-primary-dark);
+    --button-color-bg: var(--color-secondary-dark);
   }
 }
 
@@ -41,18 +48,89 @@
 /* --- Variants --- */
 
 .variantPrimary {
+  --button-color-text: var(--color-bg);
+  --button-color-bg: var(--color-primary);
+
+  &:hover:not(:active) {
+    --button-color-bg: var(--color-primary-dark);
+  }
 }
 
 .variantSecondary {
+  /* Is the default */
+}
+
+html[data-theme='dark'] {
+  & .variantSecondary:not(.outline) {
+    --button-color-text: var(--color-bg);
+  }
+}
+
+.variantTertiary {
+  --button-color-text: var(--color-bg);
+  --button-color-bg: var(--color-accent);
+
+  &:hover:not(:active) {
+    --button-color-bg: var(--color-accent-dark);
+  }
+}
+
+.variantForeground {
+  --button-color-bg: var(--color-bg);
+
+  &:hover:not(:active) {
+    --button-color-bg: var(--color-bg-dark);
+  }
+}
+
+.variantBackground {
+  --button-color-text: var(--color-bg);
+  --button-color-bg: var(--color-text);
+
+  &:hover:not(:active) {
+    --button-color-bg: var(--color-text-dark);
+  }
 }
 
 .variantDanger {
+  --button-color-bg: var(--color-danger);
+
+  &:hover:not(:active) {
+    --button-color-bg: var(--color-danger-dark);
+  }
+}
+
+html[data-theme='light'] {
+  & .variantDanger:not(.outline) {
+    --button-color-text: var(--color-bg);
+  }
 }
 
 /* This selector needs to come AFTER the `.variant*` classes */
 .outline {
-  border-color: var(--color-primary);
+  --button-color-text: var(--button-color-bg);
+  border-color: var(--button-color-text);
   background-color: transparent;
+}
+
+/* --- Sizes --- */
+
+.sizeSmall {
+  /* Is the default */
+}
+
+.sizeMedium {
+  --button-padding-x: 16px;
+  --button-padding-y: 12px;
+  --button-font-size: 18px;
+  --button-spinner-size: 32px;
+}
+
+.sizeLarge {
+  --button-padding-x: 20px;
+  --button-padding-y: 16px;
+  --button-font-size: 24px;
+  --button-spinner-size: 38px;
 }
 
 /* --- Label --- */
@@ -65,8 +143,8 @@
 }
 
 .Label {
-  /* font-family: var(--font-body); */
-  font-size: 15px;
+  /* Not using `text-box-trim` for this font. */
+  font-size: var(--button-font-size);
   font-weight: 700;
   letter-spacing: 0.04em;
   line-height: 1.2;
@@ -80,7 +158,8 @@
   display: grid;
   place-items: center;
   place-content: center;
-  font-size: 32px;
+  font-size: var(--button-spinner-size);
+  color: var(--button-color-text);
 
   /* Relies on `react-transition-state` hook. */
   opacity: 1;

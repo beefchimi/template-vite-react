@@ -13,6 +13,6 @@
     /* `aspect-ratio` should be dynamic. */
     aspect-ratio: 16 / 9;
     width: 100%;
-    background-color: var(--shade-black-80);
+    background-color: var(--shade-dark-80);
   }
 }
