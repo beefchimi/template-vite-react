@@ -1,6 +1,6 @@
 import {Accordion} from './Accordion.tsx';
 import {AccordionList} from './AccordionList.tsx';
-import {MOCK_ACCORDION} from './Accordion.test.data.ts';
+import {MOCK_ACCORDION} from './AccordionTest.data.ts';
 
 export function AccordionTest() {
   return (
